@@ -65,8 +65,8 @@ const updateBlog = async (req, res) => {
       description,
     });
 
-    if (findCurrentBlog) {
-      return res.send(200).json({ findCurrBlogAndUpdate });
+    if (findCurrBlogAndUpdate) {
+      return res.status(200).json({ findCurrBlogAndUpdate });
     }
 
     return res.status(505).json({ message: "Unable to Update a blog" });
